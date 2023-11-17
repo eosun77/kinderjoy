@@ -1,12 +1,5 @@
 import prisma from "@/prisma";
-
-function isValidName(name: unknown) {
-  return name && typeof name === "string" && name.trim().length > 0;
-}
-
-async function findUserByName(name: string) {
-  return await prisma.user.findUnique({ where: { name } });
-}
+import { findUserByName, isValidName } from "@/services/user";
 
 export async function POST(req: Request) {
   const data = await req.json();
