@@ -1,10 +1,18 @@
 import prisma from "@/prisma";
 
+function isValidName(name: unknown) {
+  return name && typeof name === "string" && name.trim().length > 0;
+}
+
+async function findUserByName(name: string) {
+  return await prisma.user.findUnique({ where: { name } });
+}
+
 export async function POST(req: Request) {
   const data = await req.json();
   const name = data.name;
 
-  if (!name || typeof name !== "string" || name.trim().length === 0) {
+  if (!isValidName(name)) {
     return Response.json(
       { message: "Invalid name provided." },
       { status: 400 }
@@ -12,7 +20,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    const user = await prisma.user.findUnique({ where: { name } });
+    const user = await findUserByName(name);
     if (!user)
       return Response.json({ message: "User not found." }, { status: 404 });
     return Response.json({ data: user }, { status: 200 });
