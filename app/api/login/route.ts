@@ -1,4 +1,3 @@
-import prisma from "@/prisma";
 import { findUserByName, isValidName } from "@/services/user";
 
 export async function POST(req: Request) {
