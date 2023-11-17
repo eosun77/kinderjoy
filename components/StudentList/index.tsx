@@ -1,8 +1,8 @@
-import prisma from "@/prisma";
+import { fetchStudents } from "@/services/student";
 import React from "react";
 
 async function StudentList() {
-  const students = await prisma.student.findMany();
+  const students = await fetchStudents();
   return (
     <div>
       {students.map((student) => (
