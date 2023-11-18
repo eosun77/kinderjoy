@@ -1,8 +1,11 @@
-import { fetchStudents } from "@/services/student";
-import React from "react";
+import React from 'react';
 
-async function StudentList() {
-  const students = await fetchStudents();
+import { Student } from '@prisma/client';
+
+interface Props {
+  students: Student[];
+}
+function StudentList({ students }: Props) {
   return (
     <div>
       {students.map((student) => (

@@ -1,11 +1,13 @@
-import StudentList from "@/components/StudentList";
-import React from "react";
+import React from 'react';
+import StudentList from '@/components/StudentList';
+import { fetchStudents } from '@/services/student';
 
-function Lottery() {
+async function Lottery() {
+  const students = await fetchStudents();
   return (
     <div>
       Lottery
-      <StudentList />
+      <StudentList students={students} />
     </div>
   );
 }
