@@ -6,7 +6,6 @@ async function Lottery() {
   const students = await fetchStudents();
   return (
     <div>
-      Lottery
       <StudentList students={students} />
     </div>
   );
