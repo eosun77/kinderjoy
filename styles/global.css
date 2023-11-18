@@ -12,6 +12,19 @@
   font-style: normal;
 }
 
+:root {
+  --random-color0: #f08080; /* 라이트 코랄 */
+  --random-color1: #87ceeb; /* 스카이 블루 */
+  --random-color2: #dda0dd; /* 플럼 */
+  --random-color3: #de98ab; /* 블러쉬 핑크 */
+  --random-color4: #cb99c9; /* 파스텔 바이올렛 */
+  --random-color5: #ff6b6b; /* 코랄 핑크 */
+  --random-color6: #b0e0e6; /* 파우더 블루 */
+  --random-color7: #0abab5; /* 티파니 블루 */
+  --random-color8: #fc6c85; /* 워터멜론 핑크 */
+  --random-color9: #ffb347; /* 파스텔 오렌지 */
+}
+
 body {
   font-family: 'Tmoney', Arial, Helvetica, sans-serif;
 }
@@ -31,4 +44,43 @@ button {
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
+}
+
+.bg-0 {
+  background-color: var(--random-color0);
+}
+
+.bg-1 {
+  background-color: var(--random-color1);
+}
+.bg-2 {
+  background-color: var(--random-color2);
+}
+
+.bg-3 {
+  background-color: var(--random-color3);
+}
+
+.bg-4 {
+  background-color: var(--random-color4);
+}
+
+.bg-5 {
+  background-color: var(--random-color5);
+}
+
+.bg-6 {
+  background-color: var(--random-color6);
+}
+
+.bg-7 {
+  background-color: var(--random-color7);
+}
+
+.bg-8 {
+  background-color: var(--random-color8);
+}
+
+.bg-9 {
+  background-color: var(--random-color9);
 }

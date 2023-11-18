@@ -1,6 +1,6 @@
 .layout {
   width: 720px;
-  height: 480px;
+  height: 100%;
 
   margin: auto;
 
@@ -38,6 +38,22 @@
 
 .listItem {
   list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 8px;
+}
+
+.number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .action {
