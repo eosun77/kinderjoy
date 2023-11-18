@@ -1,0 +1,47 @@
+.layout {
+  width: 720px;
+  height: 480px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.header {
+  height: 120px;
+}
+
+.contents {
+  height: calc(100% - 120px);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 120px;
+  height: 100%;
+}
+
+.center {
+  width: 360px;
+  height: 100%;
+}
+
+.right {
+  width: 120px;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  list-style: none;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}

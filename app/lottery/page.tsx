@@ -1,14 +1,10 @@
 import React from 'react';
-import StudentList from '@/components/StudentList';
 import { fetchStudents } from '@/services/student';
+import StudentLottery from '@/components/organisms/StudentLottery';
 
 async function Lottery() {
   const students = await fetchStudents();
-  return (
-    <div>
-      <StudentList students={students} />
-    </div>
-  );
+  return <StudentLottery students={students} />;
 }
 
 export default Lottery;
